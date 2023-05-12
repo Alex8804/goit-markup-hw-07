@@ -164,6 +164,7 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
+    height: 100%;
 
     padding-top: 80px;
     padding-right: 35px;
@@ -186,11 +187,7 @@ body {
     height: 24px;
   }
 
-  .mobile-contacts-list {
-    margin-top: auto;
-  }
-
-  .mobile-menu-item {
+  .mobile-menu-item:not(:last-child) {
     margin-bottom: 40px;
   }
 
@@ -213,10 +210,11 @@ body {
   }
 
   .mobile-contacts-list {
+    margin-top: auto;
     margin-bottom: 48px;
   }
 
-  .mobile-menu-contacts-item {
+  .mobile-menu-contacts-item:not(:last-child) {
     margin-bottom: 40px;
   }
 
