@@ -896,10 +896,6 @@ body {
   align-items: center;
 }
 
-.footer-subscribe {
-  width: 100%;
-}
-
 .footer-subscribe-subjekt {
   font-weight: 500;
   font-size: 16px;
@@ -995,6 +991,10 @@ body {
     width: 100%;
   }
 
+  .footer-subscribe {
+    width: 100%;
+  }
+
   .footer-subscribe-subjekt {
     text-align: center;
   }
@@ -1011,6 +1011,18 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    row-gap: 72px;
+    padding-left: 108px;
+  }
+
+  .footer-desc {
+    margin-right: 24px;
+  }
+
   .subscribe-form {
     gap: 24px;
     justify-content: center;
@@ -1028,7 +1040,7 @@ body {
   }
 
   .footer-container {
-    align-items: baseline;
+    padding-left: 0;
   }
 
   .footer-social {
@@ -1174,7 +1186,7 @@ body {
 
 /* =================MODAL WINDOW================= */
 
-/* .backdrop {
+.backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -1222,7 +1234,6 @@ body {
   width: 24px;
   height: 24px;
 
-  
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1234,7 +1245,6 @@ body {
 }
 
 .modal-close-btn-icon {
-  
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1243,11 +1253,28 @@ body {
 .modal-close-btn:hover .modal-close-btn-icon,
 .modal-close-btn:focus .modal-close-btn-icon {
   fill: #ffffff;
-} */
+}
+
+@media screen and (max-width: 767px) {
+  .modal {
+    width: 392px;
+    height: 584px;
+    padding: 72px 16px 24px 16px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 400px) {
+  .modal {
+    width: 312px;
+    height: 604px;
+    padding: 72px 16px 24px 16px;
+  }
+}
+
 /* =================/MODAL WINDOW================= */
 
 /* =================MODAL FORM================= */
-/* .modal-subject {
+.modal-subject {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -1406,6 +1433,6 @@ body {
 .modal-submit-btn:hover,
 .modal-submit-btn:focus {
   background-color: var(--accent-color);
-} */
+}
 
 /* =================/MODAL FORM================= */
