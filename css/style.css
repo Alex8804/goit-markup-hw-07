@@ -167,6 +167,8 @@ body {
     display: none;
   }
 
+  /* ---Mobile menu--- */
+
   .mobile-menu-btn {
     background-color: transparent;
     border: none;
@@ -225,6 +227,26 @@ body {
     padding: 0;
     width: 24px;
     height: 24px;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mobile-menu-close-btn:hover,
+  .mobile-menu-close-btn:focus {
+    background-color: var(--accent-color);
+  }
+
+  .mobile-menu-close-icon {
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mobile-menu-close-btn:hover .mobile-menu-close-icon,
+  .mobile-menu-close-btn:focus .mobile-menu-close-icon {
+    fill: #ffffff;
   }
 
   .mobile-menu-item:not(:last-child) {
@@ -296,6 +318,7 @@ body {
     flex-basis: calc((100% - 168px) / 4);
   }
 }
+/* ---Mobile menu--- */
 
 /* <<<<<</MOBILE>>>>>> */
 
