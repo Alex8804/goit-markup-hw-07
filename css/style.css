@@ -77,6 +77,10 @@ body {
     padding-bottom: 120px;
     padding-top: 120px;
   }
+
+  .our-work-section {
+    padding-top: 0;
+  }
 }
 
 .social-link,
@@ -251,6 +255,11 @@ body {
 
   .mobile-menu-item:not(:last-child) {
     margin-bottom: 40px;
+  }
+
+  .mobile-menu-item .studio-is-active,
+  .mobile-menu-item .portfolio-is-active {
+    color: var(--accent-color);
   }
 
   .mobile-menu-link {
