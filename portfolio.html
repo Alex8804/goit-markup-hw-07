@@ -44,6 +44,13 @@
             </li>
           </ul>
         </nav>
+
+        <button type="button" class="mobile-menu-btn js-open-menu">
+          <svg class="mobile-menu-btn-icon" width="32" height="22">
+            <use href="./images/icons.svg#burger-icon"></use>
+          </svg>
+        </button>
+
         <address class="address">
           <ul class="list contacts-list">
             <li>
@@ -58,6 +65,80 @@
             </li>
           </ul>
         </address>
+      </div>
+
+      <div class="mobile-menu js-menu-container">
+        <div class="container mobile-menu-container">
+          <button type="button" class="mobile-menu-close-btn js-close-menu">
+            <svg class="mobile-menu-close-icon" width="8" height="8">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+
+          <ul class="list mobile-menu-list">
+            <li class="mobile-menu-item">
+              <a class="link mobile-menu-link" href="./index.html">Studio</a>
+            </li>
+            <li class="mobile-menu-item">
+              <a
+                class="link mobile-menu-link portfolio-is-active"
+                href="./portfolio.html"
+                >Portfolio</a
+              >
+            </li>
+            <li class="mobile-menu-item">
+              <a class="link mobile-menu-link" href="">Contacts</a>
+            </li>
+          </ul>
+
+          <ul class="list mobile-contacts-list">
+            <li class="mobile-menu-contacts-item">
+              <a
+                class="link mobile-menu-contacts telephone"
+                href="tel:+110001111111"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="mobile-menu-contacts-item">
+              <a
+                class="link mobile-menu-contacts mail"
+                href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+
+          <ul class="list mobile-menu-social-list">
+            <li class="social-item">
+              <a class="link mobile-menu-social-link" href="">
+                <svg class="social-list-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-item">
+              <a class="link mobile-menu-social-link" href="">
+                <svg class="social-list-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-item">
+              <a class="link mobile-menu-social-link" href="">
+                <svg class="social-list-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-item">
+              <a class="link mobile-menu-social-link" href="">
+                <svg class="social-list-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <!-- ======================MAIN CONTENT====================== -->
@@ -88,13 +169,71 @@
             <li class="projects-list-item">
               <a class="link projects-list-link" href="">
                 <div class="projects-list-link-wrapper">
-                  <img
-                    class="projects-img"
-                    src="./images/our-projects/banking-app.jpg"
-                    alt="banking-app"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/desktop-portfolio-img/desktop-banking-app-360.webp    360w,
+                        ./images/desktop/desktop-portfolio-img/desktop-banking-app-720@2x.webp 720w
+                      "
+                      media="(min-width: 1158px)"
+                      type="image/webp"
+                      sizes="360px"
+                    />
+                    <source
+                      srcset="
+                        ./images/desktop/desktop-portfolio-img/desktop-banking-app-360.jpg    1x,
+                        ./images/desktop/desktop-portfolio-img/desktop-banking-app-720@2x.jpg 2x
+                      "
+                      media="(min-width: 1158px)"
+                      type="image/jpeg"
+                      sizes="360px"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/tablet/tablet-portfolio-img/tablet-banking-app-356.webp    356w,
+                        ./images/tablet/tablet-portfolio-img/tablet-banking-app-712@2x.webp 712w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                      sizes="356px"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/tablet-portfolio-img/tablet-banking-app-356.jpg    356w,
+                        ./images/tablet/tablet-portfolio-img/tablet-banking-app-712@2x.jpg 712w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                      sizes="356px"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/mobile/mobile-portfolio-img/mobile-banking-app-396.webp    396w,
+                        ./images/mobile/mobile-portfolio-img/mobile-banking-app-792@2x.webp 792w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="396px"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/mobile-portfolio-img/mobile-banking-app-396.jpg    396w,
+                        ./images/mobile/mobile-portfolio-img/mobile-banking-app-792@2x.jpg 792w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="396px"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      class="projects-img"
+                      src="./images/mobile/mobile-portfolio-img/mobile-banking-app-396.jpg"
+                      alt="banking-app"
+                    />
+                  </picture>
+
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -112,13 +251,70 @@
             <li class="projects-list-item">
               <a class="link projects-list-link" href="">
                 <div class="projects-list-link-wrapper">
-                  <img
-                    class="projects-img"
-                    src="./images/our-projects/cashless-payment.jpg"
-                    alt="man pays by phone"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/desktop-portfolio-img/desktop-cashless-payment-360.webp    360w,
+                        ./images/desktop/desktop-portfolio-img/desktop-cashless-payment-720@2x.webp 720w
+                      "
+                      media="(min-width: 1158px)"
+                      type="image/webp"
+                      sizes="360px"
+                    />
+                    <source
+                      srcset="
+                        ./images/desktop/desktop-portfolio-img/desktop-cashless-payment-360.jpg    1x,
+                        ./images/desktop/desktop-portfolio-img/desktop-cashless-payment-720@2x.jpg 2x
+                      "
+                      media="(min-width: 1158px)"
+                      type="image/jpeg"
+                      sizes="360px"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/tablet/tablet-portfolio-img/tablet-cashless-payment-356.webp    356w,
+                        ./images/tablet/tablet-portfolio-img/tablet-cashless-payment-712@2x.webp 712w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                      sizes="356px"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/tablet-portfolio-img/tablet-cashless-payment-356.jpg    356w,
+                        ./images/tablet/tablet-portfolio-img/tablet-cashless-payment-712@2x.jpg 712w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                      sizes="356px"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/mobile/mobile-portfolio-img/mobile-cashless-payment-396.webp    396w,
+                        ./images/mobile/mobile-portfolio-img/mobile-cashless-payment-792@2x.webp 792w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="396px"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/mobile-portfolio-img/mobile-cashless-payment-396.jpg    396w,
+                        ./images/mobile/mobile-portfolio-img/mobile-cashless-payment-792@2x.jpg 792w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="396px"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      class="projects-img"
+                      src="./images/mobile/mobile-portfolio-img/mobile-cashless-payment-396.jpg"
+                      alt="man paid by phone"
+                    />
+                  </picture>
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -136,13 +332,70 @@
             <li class="projects-list-item">
               <a class="link projects-list-link" href="">
                 <div class="projects-list-link-wrapper">
-                  <img
-                    class="projects-img"
-                    src="./images/our-projects/meditation-app.jpg"
-                    alt="app for meditation"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/desktop-portfolio-img/desktop-meditation-app-360.webp    360w,
+                        ./images/desktop/desktop-portfolio-img/desktop-meditation-app-720@2x.webp 720w
+                      "
+                      media="(min-width: 1158px)"
+                      type="image/webp"
+                      sizes="360px"
+                    />
+                    <source
+                      srcset="
+                        ./images/desktop/desktop-portfolio-img/desktop-meditation-app-360.jpg    1x,
+                        ./images/desktop/desktop-portfolio-img/desktop-meditation-app-720@2x.jpg 2x
+                      "
+                      media="(min-width: 1158px)"
+                      type="image/jpeg"
+                      sizes="360px"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/tablet/tablet-portfolio-img/tablet-meditation-app-356.webp    356w,
+                        ./images/tablet/tablet-portfolio-img/tablet-meditation-app-712@2x.webp 712w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                      sizes="356px"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/tablet-portfolio-img/tablet-meditation-app-356.jpg    356w,
+                        ./images/tablet/tablet-portfolio-img/tablet-meditation-app-712@2x.jpg 712w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                      sizes="356px"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/mobile/mobile-portfolio-img/mobile-meditation-app-396.webp    396w,
+                        ./images/mobile/mobile-portfolio-img/mobile-meditation-app-792@2x.webp 792w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="396px"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/mobile-portfolio-img/mobile-meditation-app-396.jpg    396w,
+                        ./images/mobile/mobile-portfolio-img/mobile-meditation-app-792@2x.jpg 792w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="396px"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      class="projects-img"
+                      src="./images/mobile/mobile-portfolio-img/mobile-meditation-app-396.jpg"
+                      alt="app for meditation"
+                    />
+                  </picture>
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -160,13 +413,70 @@
             <li class="projects-list-item">
               <a class="link projects-list-link" href="">
                 <div class="projects-list-link-wrapper">
-                  <img
-                    class="projects-img"
-                    src="./images/our-projects/taxi-service.jpg"
-                    alt="the driver uses the app"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/desktop-portfolio-img/desktop-taxi-service-360.webp    360w,
+                        ./images/desktop/desktop-portfolio-img/desktop-taxi-service-720@2x.webp 720w
+                      "
+                      media="(min-width: 1158px)"
+                      type="image/webp"
+                      sizes="360px"
+                    />
+                    <source
+                      srcset="
+                        ./images/desktop/desktop-portfolio-img/desktop-taxi-service-360.jpg    1x,
+                        ./images/desktop/desktop-portfolio-img/desktop-taxi-service-720@2x.jpg 2x
+                      "
+                      media="(min-width: 1158px)"
+                      type="image/jpeg"
+                      sizes="360px"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/tablet/tablet-portfolio-img/tablet-taxi-service-356.webp    356w,
+                        ./images/tablet/tablet-portfolio-img/tablet-taxi-service-712@2x.webp 712w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                      sizes="356px"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/tablet-portfolio-img/tablet-taxi-service-356.jpg    356w,
+                        ./images/tablet/tablet-portfolio-img/tablet-taxi-service-712@2x.jpg 712w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                      sizes="356px"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/mobile/mobile-portfolio-img/mobile-taxi-service-396.webp    396w,
+                        ./images/mobile/mobile-portfolio-img/mobile-taxi-service-792@2x.webp 792w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="396px"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/mobile-portfolio-img/mobile-taxi-service-396.jpg    396w,
+                        ./images/mobile/mobile-portfolio-img/mobile-taxi-service-792@2x.jpg 792w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="396px"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      class="projects-img"
+                      src="./images/mobile/mobile-portfolio-img/mobile-taxi-service-396.jpg"
+                      alt="the driver uses the app"
+                    />
+                  </picture>
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -184,13 +494,70 @@
             <li class="projects-list-item">
               <a class="link projects-list-link" href="">
                 <div class="projects-list-link-wrapper">
-                  <img
-                    class="projects-img"
-                    src="./images/our-projects/screen-illustration.jpg"
-                    alt="illustration with moon"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/desktop-portfolio-img/desktop-screen-illustration-360.webp    360w,
+                        ./images/desktop/desktop-portfolio-img/desktop-screen-illustration-720@2x.webp 720w
+                      "
+                      media="(min-width: 1158px)"
+                      type="image/webp"
+                      sizes="360px"
+                    />
+                    <source
+                      srcset="
+                        ./images/desktop/desktop-portfolio-img/desktop-screen-illustration-360.jpg    1x,
+                        ./images/desktop/desktop-portfolio-img/desktop-screen-illustration-720@2x.jpg 2x
+                      "
+                      media="(min-width: 1158px)"
+                      type="image/jpeg"
+                      sizes="360px"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/tablet/tablet-portfolio-img/tablet-screen-illustration-356.webp    356w,
+                        ./images/tablet/tablet-portfolio-img/tablet-screen-illustration-712@2x.webp 712w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                      sizes="356px"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/tablet-portfolio-img/tablet-screen-illustration-356.jpg    356w,
+                        ./images/tablet/tablet-portfolio-img/tablet-screen-illustration-712@2x.jpg 712w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                      sizes="356px"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/mobile/mobile-portfolio-img/mobile-screen-illustration-396.webp    396w,
+                        ./images/mobile/mobile-portfolio-img/mobile-screen-illustration-792@2x.webp 792w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="396px"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/mobile-portfolio-img/mobile-screen-illustration-396.jpg    396w,
+                        ./images/mobile/mobile-portfolio-img/mobile-screen-illustration-792@2x.jpg 792w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="396px"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      class="projects-img"
+                      src="./images/mobile/mobile-portfolio-img/mobile-screen-illustration-396.jpg"
+                      alt="tillustration with moon"
+                    />
+                  </picture>
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -208,13 +575,71 @@
             <li class="projects-list-item">
               <a class="link projects-list-link" href="">
                 <div class="projects-list-link-wrapper">
-                  <img
-                    class="projects-img"
-                    src="./images/our-projects/online-courses.jpg"
-                    alt="girl studying using phone"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/desktop-portfolio-img/desktop-online-courses-360.webp    360w,
+                        ./images/desktop/desktop-portfolio-img/desktop-online-courses-720@2x.webp 720w
+                      "
+                      media="(min-width: 1158px)"
+                      type="image/webp"
+                      sizes="360px"
+                    />
+                    <source
+                      srcset="
+                        ./images/desktop/desktop-portfolio-img/desktop-online-courses-360.jpg    1x,
+                        ./images/desktop/desktop-portfolio-img/desktop-online-courses-720@2x.jpg 2x
+                      "
+                      media="(min-width: 1158px)"
+                      type="image/jpeg"
+                      sizes="360px"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/tablet/tablet-portfolio-img/tablet-online-courses-356.webp    356w,
+                        ./images/tablet/tablet-portfolio-img/tablet-online-courses-712@2x.webp 712w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                      sizes="356px"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/tablet-portfolio-img/tablet-online-courses-356.jpg    356w,
+                        ./images/tablet/tablet-portfolio-img/tablet-online-courses-712@2x.jpg 712w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                      sizes="356px"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/mobile/mobile-portfolio-img/mobile-online-courses-396.webp    396w,
+                        ./images/mobile/mobile-portfolio-img/mobile-online-courses-792@2x.webp 792w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="396px"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/mobile-portfolio-img/mobile-online-courses-396.jpg    396w,
+                        ./images/mobile/mobile-portfolio-img/mobile-online-courses-792@2x.jpg 792w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="396px"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      class="projects-img"
+                      src="./images/mobile/mobile-portfolio-img/mobile-online-courses-396.jpg"
+                      alt="girl studying using phone"
+                    />
+                  </picture>
+
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -232,13 +657,71 @@
             <li class="projects-list-item">
               <a class="link projects-list-link" href="">
                 <div class="projects-list-link-wrapper">
-                  <img
-                    class="projects-img"
-                    src="./images/our-projects/insta-stories.jpg"
-                    alt="instagram stories"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/desktop-portfolio-img/desktop-insta-stories-360.webp    360w,
+                        ./images/desktop/desktop-portfolio-img/desktop-insta-stories-720@2x.webp 720w
+                      "
+                      media="(min-width: 1158px)"
+                      type="image/webp"
+                      sizes="360px"
+                    />
+                    <source
+                      srcset="
+                        ./images/desktop/desktop-portfolio-img/desktop-insta-stories-360.jpg    1x,
+                        ./images/desktop/desktop-portfolio-img/desktop-insta-stories-720@2x.jpg 2x
+                      "
+                      media="(min-width: 1158px)"
+                      type="image/jpeg"
+                      sizes="360px"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/tablet/tablet-portfolio-img/tablet-insta-stories-356.webp    356w,
+                        ./images/tablet/tablet-portfolio-img/tablet-insta-stories-712@2x.webp 712w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                      sizes="356px"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/tablet-portfolio-img/tablet-insta-stories-356.jpg    356w,
+                        ./images/tablet/tablet-portfolio-img/tablet-insta-stories-712@2x.jpg 712w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                      sizes="356px"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/mobile/mobile-portfolio-img/mobile-insta-stories-396.webp    396w,
+                        ./images/mobile/mobile-portfolio-img/mobile-insta-stories-792@2x.webp 792w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="396px"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/mobile-portfolio-img/mobile-insta-stories-396.jpg    396w,
+                        ./images/mobile/mobile-portfolio-img/mobile-insta-stories-792@2x.jpg 792w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="396px"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      class="projects-img"
+                      src="./images/mobile/mobile-portfolio-img/mobile-insta-stories-396.jpg"
+                      alt="instagram stories"
+                    />
+                  </picture>
+
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -256,13 +739,71 @@
             <li class="projects-list-item">
               <a class="link projects-list-link" href="">
                 <div class="projects-list-link-wrapper">
-                  <img
-                    class="projects-img"
-                    src="./images/our-projects/organic-food.jpg"
-                    alt="bag with organic food"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/desktop-portfolio-img/desktop-organic-food-360.webp    360w,
+                        ./images/desktop/desktop-portfolio-img/desktop-organic-food-720@2x.webp 720w
+                      "
+                      media="(min-width: 1158px)"
+                      type="image/webp"
+                      sizes="360px"
+                    />
+                    <source
+                      srcset="
+                        ./images/desktop/desktop-portfolio-img/desktop-organic-food-360.jpg    1x,
+                        ./images/desktop/desktop-portfolio-img/desktop-organic-food-720@2x.jpg 2x
+                      "
+                      media="(min-width: 1158px)"
+                      type="image/jpeg"
+                      sizes="360px"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/tablet/tablet-portfolio-img/tablet-organic-food-356.webp    356w,
+                        ./images/tablet/tablet-portfolio-img/tablet-organic-food-712@2x.webp 712w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                      sizes="356px"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/tablet-portfolio-img/tablet-organic-food-356.jpg    356w,
+                        ./images/tablet/tablet-portfolio-img/tablet-organic-food-712@2x.jpg 712w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                      sizes="356px"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/mobile/mobile-portfolio-img/mobile-organic-food-396.webp    396w,
+                        ./images/mobile/mobile-portfolio-img/mobile-organic-food-792@2x.webp 792w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="396px"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/mobile-portfolio-img/mobile-organic-food-396.jpg    396w,
+                        ./images/mobile/mobile-portfolio-img/mobile-organic-food-792@2x.jpg 792w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="396px"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      class="projects-img"
+                      src="./images/mobile/mobile-portfolio-img/mobile-organic-food-396.jpg"
+                      alt="bag with organic food"
+                    />
+                  </picture>
+
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -280,13 +821,71 @@
             <li class="projects-list-item">
               <a class="link projects-list-link" href="">
                 <div class="projects-list-link-wrapper">
-                  <img
-                    class="projects-img"
-                    src="./images/our-projects/fresh-coffee.jpg"
-                    alt="cup with coffee"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/desktop-portfolio-img/desktop-fresh-coffee-360.webp    360w,
+                        ./images/desktop/desktop-portfolio-img/desktop-fresh-coffee-720@2x.webp 720w
+                      "
+                      media="(min-width: 1158px)"
+                      type="image/webp"
+                      sizes="360px"
+                    />
+                    <source
+                      srcset="
+                        ./images/desktop/desktop-portfolio-img/desktop-fresh-coffee-360.jpg    1x,
+                        ./images/desktop/desktop-portfolio-img/desktop-fresh-coffee-720@2x.jpg 2x
+                      "
+                      media="(min-width: 1158px)"
+                      type="image/jpeg"
+                      sizes="360px"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/tablet/tablet-portfolio-img/tablet-fresh-coffee-356.webp    356w,
+                        ./images/tablet/tablet-portfolio-img/tablet-fresh-coffee-712@2x.webp 712w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                      sizes="356px"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/tablet-portfolio-img/tablet-fresh-coffee-356.jpg    356w,
+                        ./images/tablet/tablet-portfolio-img/tablet-fresh-coffee-712@2x.jpg 712w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                      sizes="356px"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/mobile/mobile-portfolio-img/mobile-fresh-coffee-396.webp    396w,
+                        ./images/mobile/mobile-portfolio-img/mobile-fresh-coffee-792@2x.webp 792w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="396px"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/mobile-portfolio-img/mobile-fresh-coffee-396.jpg    396w,
+                        ./images/mobile/mobile-portfolio-img/mobile-fresh-coffee-792@2x.jpg 792w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="396px"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      class="projects-img"
+                      src="./images/mobile/mobile-portfolio-img/mobile-fresh-coffee-396.jpg"
+                      alt="cup with coffee"
+                    />
+                  </picture>
+
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -355,14 +954,14 @@
           <p class="footer-subscribe-subjekt">Subscribe</p>
           <form class="subscribe-form">
             <label>
-                <input
-                  class="subscribe-form-input"
-                  type="email"
-                  name="user_email"
-                  placeholder="E-mail"
-                  required
-                />
-              </label>
+              <input
+                class="subscribe-form-input"
+                type="email"
+                name="user_email"
+                placeholder="E-mail"
+                required
+              />
+            </label>
             <button class="subscribe-btn" type="submit">
               Subscribe
               <svg class="subscribe-icon" width="24" height="24">
@@ -373,5 +972,15 @@
         </div>
       </div>
     </footer>
+
+    <!-- ============================/SCRIPTS============================ -->
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

@@ -533,8 +533,8 @@ body {
 }
 
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
+  screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px) {
   .hero {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -564,8 +564,8 @@ body {
 }
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
+  screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) {
   .hero {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -594,8 +594,8 @@ body {
 }
 
 @media screen and (min-width: 1158px) and (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
+  screen and (min-resolution: 192dpi) and (min-width: 1158px),
+  screen and (min-resolution: 2dppx) and (min-width: 1158px) {
   .hero {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -1088,19 +1088,12 @@ body {
 
 /* =================PORTFOLIO================= */
 
-.portfolio-section {
-  padding-top: 96px;
-  padding-bottom: 120px;
-}
-
 .filters-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 72px;
-  row-gap: 48px;
+  margin-bottom: 48px;
+  row-gap: 16px;
   column-gap: 24px;
-  gap: 24px;
 }
 
 .filters-btn {
@@ -1109,15 +1102,12 @@ body {
   border: 1px solid #e7e9fc;
   border-radius: 4px;
   cursor: pointer;
-  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   display: inline-block;
   letter-spacing: 0.04em;
-  padding: 12px 24px;
-
-  /* *  Transition values  */
+  padding: 8px 16px;
 
   transition-property: color, background-color, box-shadow, border;
   transition-duration: 250ms;
@@ -1131,11 +1121,13 @@ body {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border: 1px solid transparent;
+  outline: none;
 }
 
 .projekts-list {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   column-gap: 24px;
   row-gap: 48px;
 }
@@ -1147,8 +1139,8 @@ body {
 
 .projects-list-link {
   display: block;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 
-  /* *  Transition values  */
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1158,6 +1150,7 @@ body {
 .projects-list-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  outline: none;
 }
 
 .projects-list-link:hover .overlay,
@@ -1185,7 +1178,6 @@ body {
   padding: 40px 32px;
   transform: translate(0, 100%);
 
-  /* *  Transition values  */
   transition-property: transform;
   transition: 250ms linear;
 }
@@ -1212,6 +1204,61 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio-section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .filters-list {
+    max-width: 270px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-section {
+    padding-top: 48px;
+    padding-bottom: 96px;
+  }
+
+  .filters-list {
+    margin-bottom: 64px;
+    justify-content: center;
+    row-gap: 48px;
+    column-gap: 24px;
+  }
+
+  .filters-btn {
+    padding: 12px 24px;
+  }
+
+  .projekts-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .portfolio-section {
+    padding-top: 96px;
+    padding-bottom: 120px;
+  }
+
+  .filters-list {
+    margin-bottom: 72px;
+  }
+
+  .projekts-list {
+    row-gap: 48px;
+  }
+
+  .projects-list-link {
+    box-shadow: none;
+  }
 }
 
 /* =================/PORTFOLIO================= */
