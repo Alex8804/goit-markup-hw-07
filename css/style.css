@@ -103,16 +103,19 @@ body {
 .mobile-menu-social-link:hover,
 .mobile-menu-social-link:focus {
   background-color: var(--accent-color);
+  outline: none;
 }
 
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-color);
+  outline: none;
 }
 
 .social-link-footer:hover,
 .social-link-footer:focus {
   background-color: #31d0aa;
+  outline: none;
 }
 /* =================COMPONENTS================= */
 
@@ -240,6 +243,7 @@ body {
   .mobile-menu-close-btn:hover,
   .mobile-menu-close-btn:focus {
     background-color: var(--accent-color);
+    outline: none;
   }
 
   .mobile-menu-close-icon {
@@ -278,6 +282,7 @@ body {
   .mobile-menu-link:hover,
   .mobile-menu-link:focus {
     color: var(--accent-color);
+    outline: none;
   }
 
   .mobile-contacts-list {
@@ -315,6 +320,7 @@ body {
   .mobile-menu-contacts:hover,
   .mobile-menu-contacts:focus {
     color: #4d5ae5;
+    outline: none;
   }
 
   .mobile-menu-social-list {
@@ -375,6 +381,7 @@ body {
   .menu-link:hover,
   .menu-link:focus {
     color: var(--accent-color);
+    outline: none;
   }
 
   .studio-is-active::after,
@@ -422,6 +429,7 @@ body {
   .contacts:hover,
   .contacts:focus {
     color: var(--accent-color);
+    outline: none;
   }
 }
 
@@ -511,6 +519,7 @@ body {
 .hero-btn:hover,
 .hero-btn:focus {
   background-color: var(--accent-color);
+  outline: none;
 }
 
 @media screen and (max-width: 767px) {
@@ -848,6 +857,7 @@ body {
 .customers-link:focus {
   border: 1px solid var(--accent-color);
   color: var(--accent-color);
+  outline: none;
 }
 
 @media screen and (max-width: 767px) {
@@ -998,6 +1008,7 @@ body {
 .subscribe-btn:focus,
 .subscribe-btn:hover {
   background-color: var(--accent-color);
+  outline: none;
 }
 
 @media screen and (max-width: 767px) {
@@ -1321,6 +1332,7 @@ body {
 .modal-close-btn:hover,
 .modal-close-btn:focus {
   background-color: var(--accent-color);
+  outline: none;
 }
 
 .modal-close-btn-icon {
@@ -1512,6 +1524,7 @@ body {
 .modal-submit-btn:hover,
 .modal-submit-btn:focus {
   background-color: var(--accent-color);
+  outline: none;
 }
 
 /* =================/MODAL FORM================= */
